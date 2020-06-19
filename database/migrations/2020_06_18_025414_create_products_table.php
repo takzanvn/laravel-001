@@ -17,7 +17,7 @@ class CreateProductsTable extends Migration
             //
             $table->increments('product_id');
             $table->string('product_name');
-            $table->string('product_scale');
+            $table->float('product_scale', 3, 2)->nullable();
             $table->string('product_vendor');
             $table->string('product_description');
             $table->integer('quantity_in_stock');
