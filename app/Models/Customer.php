@@ -6,7 +6,7 @@ use Illuminate\Database\Eloquent\Model;
 
 class Customer extends Model
 {
-    protected $table = 'customer';
+    protected $table = 'customers';
 
     public $timestamps = false;
     
@@ -21,7 +21,7 @@ class Customer extends Model
         'state',
         'postal_code',
         'country',
-        'sale_rep_employee_id',
+        'sales_rep_employee_id',
         'credit_limit'
     ];
 }
