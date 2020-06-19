@@ -20,8 +20,8 @@ class CreateCustomersTable extends Migration
             $table->string('last_name', 40);
             $table->string('first_name', 60);
             $table->string('phone', 20);
-            $table->string('address_line1', 100);
-            $table->string('address_line2', 100);
+            $table->string('address_line1', 100)->nullable();
+            $table->string('address_line2', 100)->nullable();
             $table->string('city', 100);
             $table->string('state', 100);
             $table->integer('postal_code');
