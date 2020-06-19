@@ -6,8 +6,9 @@ use Illuminate\Database\Eloquent\Model;
 
 class ProductLine extends Model
 {
-    //
     protected $table = 'product_lines';
+
+    public $timestamps = false;
 
     protected $fillable = [
         'text_description',
