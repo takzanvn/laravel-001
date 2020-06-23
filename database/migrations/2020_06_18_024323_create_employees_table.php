@@ -14,15 +14,14 @@ class CreateEmployeesTable extends Migration
     public function up()
     {
         Schema::create('employees', function (Blueprint $table) {
-            //
-            $table->increments('employee_id');
+            $table->id();
             $table->string('last_name', 40);
             $table->string('first_name', 60);
             $table->string('extension', 100);
             $table->string('email', 80);
             $table->integer('reports_to');
             $table->string('job_title', 100);
-            $table->integer('office_id');
+            $table->foreignId('office_id')->constrained();
         });
     }
 

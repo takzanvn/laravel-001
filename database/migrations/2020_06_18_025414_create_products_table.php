@@ -14,8 +14,7 @@ class CreateProductsTable extends Migration
     public function up()
     {
         Schema::create('products', function (Blueprint $table) {
-            //
-            $table->increments('product_id');
+            $table->id();
             $table->string('product_name');
             $table->float('product_scale', 3, 2)->nullable();
             $table->string('product_vendor');
@@ -23,7 +22,7 @@ class CreateProductsTable extends Migration
             $table->integer('quantity_in_stock');
             $table->integer('buy_price');
             $table->string('msrp');
-            $table->integer('product_line_id');
+            $table->foreignId('product_line_id')->constrained();
         });
     }
 
