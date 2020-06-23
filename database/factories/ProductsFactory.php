@@ -26,7 +26,7 @@ $factory->define(Product::class, function (Faker $faker) {
         'Cellphones',
     ];
 
-    $id_product_lines = DB::table('product_lines')->pluck('product_line_id');
+    $id_product_lines = DB::table('product_lines')->pluck('id');
 
     return [
         'product_name' => $faker->randomElement($brands) . "_" . $faker->regexify("[A-Z0-9]{8}"),

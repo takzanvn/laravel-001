@@ -6,7 +6,7 @@ use App\Models\Employee;
 use Faker\Generator as Faker;
 
 $factory->define(Employee::class, function (Faker $faker) {
-    $id_office = DB::table('offices')->pluck('office_id');
+    $id_office = DB::table('offices')->pluck('id');
 
     return [
         'last_name' => $faker->lastName(),
