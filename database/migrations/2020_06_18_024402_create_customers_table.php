@@ -14,8 +14,7 @@ class CreateCustomersTable extends Migration
     public function up()
     {
         Schema::create('customers', function (Blueprint $table) {
-            //
-            $table->increments('customer_id');
+            $table->id();
             $table->string('username', 30);
             $table->string('last_name', 40);
             $table->string('first_name', 60);
@@ -26,8 +25,8 @@ class CreateCustomersTable extends Migration
             $table->string('state', 100);
             $table->integer('postal_code');
             $table->string('country', 100);
-            $table->integer('sales_rep_employee_id');
             $table->integer('credit_limit');
+            $table->foreignId('sales_rep_employee_id')->constrained('employees');
         });
     }
 
