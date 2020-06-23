@@ -18,4 +18,8 @@ class Office extends Model
         'country',
         'postal_code'
     ];
+
+    public function employees() {
+        return $this->hasMany(Employee::class);
+    }
 }

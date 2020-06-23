@@ -24,4 +24,16 @@ class Customer extends Model
         'sales_rep_employee_id',
         'credit_limit'
     ];
+
+    public function salesRepByEmployee() {
+        return $this->belongsTo(Employee::class);
+    }
+
+    public function orders() {
+        return $this->hasMany(Order::class);
+    }
+
+    public function payments() {
+        return $this->hasMany(Payment::class);
+    }
 }
