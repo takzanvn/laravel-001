@@ -18,6 +18,7 @@ class CreateOrderdetailsTable extends Migration
             $table->mediumInteger('quantity_ordered');
             $table->integer('price_each');
             $table->foreignId('order_id')->constrained();
+            $table->foreignId('product_id')->constrained();
         });
     }
 

@@ -17,4 +17,16 @@ class Employee extends Model
         'email',
         'job_title'
     ];
+
+    public function office() {
+        return $this->belongsTo(Office::class);
+    }
+
+    public function salesRepToCustomers() {
+        return $this->hasMany(Customer::class, 'sales_rep_employee_id');
+    }
+
+    public function reportTo() {
+        return $this->hasMany(static::class, 'reports_to');
+    }
 }
