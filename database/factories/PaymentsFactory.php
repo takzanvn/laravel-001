@@ -6,7 +6,7 @@ use App\Models\Payment;
 use Faker\Generator as Faker;
 
 $factory->define(Payment::class, function (Faker $faker) {
-    $id_customers = DB::table('customers')->pluck('customer_id');
+    $id_customers = DB::table('customers')->pluck('id');
 
     return [
         'customer_id' => $faker->randomElement($id_customers),

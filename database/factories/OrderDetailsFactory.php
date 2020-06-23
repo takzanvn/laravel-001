@@ -6,7 +6,7 @@ use App\Models\OrderDetail;
 use Faker\Generator as Faker;
 
 $factory->define(OrderDetail::class, function (Faker $faker) {
-    $id_orders = DB::table('orders')->pluck('order_id');
+    $id_orders = DB::table('orders')->pluck('id');
 
     return [
         'quantity_ordered' => $faker->numberBetween(1, 1000),

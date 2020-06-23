@@ -9,7 +9,7 @@ $factory->define(Order::class, function (Faker $faker) {
     $orderDate = date(NOW());
     $requiredDate = date("Y-m-d", intval(strtotime("+{$faker->numberBetween(3,7)} days")));
     $shippedDate = date("Y-m-d", intval(strtotime("+{$faker->numberBetween(3,7)} days")));
-    $id_customer = DB::table('customers')->pluck('customer_id');
+    $id_customer = DB::table('customers')->pluck('id');
     return [
         'order_date' => $orderDate,
         'required_date' => $requiredDate,
