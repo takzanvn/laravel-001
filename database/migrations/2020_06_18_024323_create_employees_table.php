@@ -19,7 +19,7 @@ class CreateEmployeesTable extends Migration
             $table->string('first_name', 60);
             $table->string('extension', 100);
             $table->string('email', 80);
-            $table->integer('reports_to');
+            $table->foreignId('reports_to')->constrained('employees');
             $table->string('job_title', 100);
             $table->foreignId('office_id')->constrained();
         });
