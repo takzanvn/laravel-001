@@ -31,6 +31,6 @@ class Employee extends Model
     }
 
     public function reportTo() {
-        return $this->belongsTo(static::class);
+        return $this->belongsTo(static::class, 'reports_to');
     }
 }
