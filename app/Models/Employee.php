@@ -31,6 +31,10 @@ class Employee extends Model
     }
 
     public function reportTo() {
-        return $this->belongsTo(static::class);
+        return $this->belongsTo(static::class, 'reports_to');
+    }
+
+    public function salesRepToOrders() {
+        return $this->hasManyThrough(Order::class, Customer::class, 'sales_rep_employee_id', 'customer_id', 'id', 'id');
     }
 }
