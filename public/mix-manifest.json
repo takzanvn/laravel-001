@@ -1,0 +1,12 @@
+{
+    "/js/app.js": "/js/app.js",
+    "/_admin/css/bootstrap.css": "/_admin/css/bootstrap.css",
+    "/_admin/css/admin.css": "/_admin/css/admin.css",
+    "/_admin/css/app.css": "/_admin/css/app.css",
+    "/css/app.css": "/css/app.css",
+    "/_admin/js/jquery.min.js": "/_admin/js/jquery.min.js",
+    "/_admin/js/bootstrap.min.js": "/_admin/js/bootstrap.min.js",
+    "/_admin/js/app.min.js": "/_admin/js/app.min.js",
+    "/_admin/js/dashboard.js": "/_admin/js/dashboard.js",
+    "/_admin/js/demo.js": "/_admin/js/demo.js"
+}

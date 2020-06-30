@@ -1,0 +1,67 @@
+@media screen and (max-width: 767px) {
+  .main-header .navbar {
+    margin-top: -1px;
+  }
+}
+
+.content-header {
+  float: left;
+  line-height: 1.8rem;
+}
+
+.content-header a {
+  font-size: 2rem;
+  color: white;
+}
+
+.skin-black-light .content-header a,
+.skin-black .content-header a {
+  color: #222;
+}
+
+.content-header small {
+  font-size: 0.8em;
+}
+
+.search-pane {
+  padding: 9px 0px 5px;
+}
+
+.search-pane .search-form {
+  position: relative;
+}
+
+.search-pane input[type=text] {
+  line-height: 2.4rem;
+  border-radius: 20px;
+  border: none;
+  padding: 4px 8px;
+  outline: none;
+  width: 69px;
+  font-weight: 400;
+}
+
+.search-pane input[type=text]:focus {
+  width: 240px;
+  padding-right: 40px;
+  transition: width 0.3s ease-in;
+}
+
+.search-pane input[type=text]:focus ~ #search-btn {
+  display: inline-block;
+  border-top-right-radius: 1.8rem;
+  border-bottom-right-radius: 1.8rem;
+  padding: 5px 13px;
+  position: absolute;
+  right: -1px;
+  background-color: #DDD;
+}
+
+.search-pane input[type=text] ~ #search-btn {
+  display: none;
+}
+
+.dropdown.user-menu .user-image ~ span {
+  visibility: hidden;
+}
+
